@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    android:padding="16dp"
+    tools:context="view.activity.ScheduleDetailsActivity"
+    android:id="@+id/main_schedule">
+
+    <RelativeLayout
+        android:id="@+id/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/schedule_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Schedule"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/save_schedule_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_check_24"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar_layout"
+        android:layout_marginVertical="26dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/schedule_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:hint="Title"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/schedule_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="top"
+            android:hint="Content"
+            android:minLines="5"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_schedule_draw_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/baseline_draw_24"
+            android:alpha="0.6"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardElevation="10dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/schdeule_image_paint"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_horizontal"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/btn_schedule_delete_image_paint"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/baseline_delete_forever_24"
+            android:alpha="0.6"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SET TIME TO NOTIFICATION"
+            android:alpha="0.6"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_schedule_date"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/baseline_calendar_month_24"
+                android:alpha="0.6" />
+
+            <TextView
+                android:id="@+id/txt_schedule_date_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00 / 00 / 0000"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_schedule_time"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/baseline_access_time_24"
+                android:alpha="0.6" />
+
+            <TextView
+                android:id="@+id/txt_schedule_time_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00 : 00 AM"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_schedule_text_view_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Delete schedule"
+        android:textColor="#FF0000"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
