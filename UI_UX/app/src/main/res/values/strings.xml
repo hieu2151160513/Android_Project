@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Drinking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_image">Thêm ảnh</string>
+    <string name="toolBarTitleName">Menu</string>
+    <string name="titleListItems">All products</string>
+    <string name="nav_drawer_open">Open drawer nav</string>
+    <string name="nav_drawer_close">Close drawer nav</string>
+
+
+</resources>
