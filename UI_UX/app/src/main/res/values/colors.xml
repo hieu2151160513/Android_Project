@@ -20,4 +20,5 @@
     <color name="colorToolBarTitle">#09c6df</color>
     <color name="endblue">#0bcce6</color>
     <color name="graylight">#D3D3D3</color>
+    <color name="light_gray">#D3D3D3</color>
 </resources>
